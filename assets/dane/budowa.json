@@ -1,0 +1,30 @@
+[
+    {
+        "title": "Pancerz Diegoxxx12131",
+        "description": "Elegancki stół wykonany z drewna dębowego.",
+        "thumbnail": "thumbnails/thumbnail1.jpg",
+        "model": "assets/models/mebel1.glb",
+        "category": "Meble"
+    },
+    {
+        "title": "Pancerz Diego2",
+        "description": "Elegancki stół wykonany z drewna dębowego.",
+        "thumbnail": "assets/card/zbroja1.webp",
+        "model": "assets/models/model2.glb",
+        "category": "Skrzynie"
+    },
+    {
+        "title": "Dom 1",
+        "description": "Elegancki dwupiętrowy dom.",
+        "thumbnail": "assets/card/dom1.webp",
+        "model": "assets/models/DOM1.glb",
+        "category": "Stoły craftingowe"
+    },
+        {
+        "title": "Pancerz Diegoxxx",
+        "description": "Elegancki stół wykonany z drewna dębowego.",
+        "thumbnail": "thumbnails/thumbnail1.jpg",
+        "model": "assets/models/model1.glb",
+        "category": "Broń dystansowa"
+    }
+]
