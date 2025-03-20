@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const spinner = document.getElementById('spinner'); // Pobierz spinner
     const categoryButtons = document.querySelectorAll('.button');
 
-    const jsonUrl = '/assets/dane/budowa.json';
+    const jsonUrl = 'https://raw.githubusercontent.com/Msciciel55/3dkatalog/refs/heads/main/dane.json';
 
     let models = [];
 

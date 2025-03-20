@@ -42,14 +42,11 @@ document.addEventListener('DOMContentLoaded', () => {
                 document.getElementById('model-title').textContent = model.title;
                 document.getElementById('model-description').textContent = model.description;
             
-                // Pokazujemy spinner
                 spinner.style.display = 'block';
-            
-                // Sprawdzamy, czy model został wcześniej załadowany
                 if (modelViewerElement.getAttribute('src') === model.model) {
-                    spinner.style.display = 'none';
+                    spinner.style.display = 'none'; 
                 } else {
-                    modelViewerElement.setAttribute('src', '');
+                    modelViewerElement.setAttribute('src', ''); 
                     setTimeout(() => {
                         modelViewerElement.setAttribute('src', model.model);
                     }, 50);

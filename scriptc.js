@@ -3,11 +3,11 @@ document.addEventListener('DOMContentLoaded', () => {
     const modelViewer = document.getElementById('model-viewer');
     const closeViewer = document.getElementById('close-viewer');
     const modelViewerElement = modelViewer.querySelector('model-viewer');
-    const spinner = document.getElementById('spinner');
+    const spinner = document.getElementById('spinner'); // Pobierz spinner
     const categoryButtons = document.querySelectorAll('.button');
 
-    const jsonUrl = 'https://raw.githubusercontent.com/Msciciel55/katalog.vermis/refs/heads/main/assets/dane/ciesla.json';
-    
+    const jsonUrl = 'https://raw.githubusercontent.com/Msciciel55/3dkatalog/refs/heads/main/dane.json';
+
     let models = [];
 
     async function fetchModels() {
@@ -41,27 +41,30 @@ document.addEventListener('DOMContentLoaded', () => {
             card.addEventListener('click', () => {
                 document.getElementById('model-title').textContent = model.title;
                 document.getElementById('model-description').textContent = model.description;
-                spinner.style.display = 'block'; // Pokaż spinner
-
-                // Najpierw usuń poprzedni model
+            
+                spinner.style.display = 'block';
+            
+                // Ukryj model-viewer, aby uniknąć efektu starego modelu
+                modelViewerElement.style.display = 'none';
                 modelViewerElement.removeAttribute('src');
-
-                // Dodaj krótkie opóźnienie, aby przeglądarka miała czas na wyczyszczenie
+            
                 setTimeout(() => {
-                    modelViewerElement.setAttribute('src', model.model); // Ustaw nowy model
-                }, 50); // Opóźnienie 50 ms
-
-                modelViewer.style.display = 'flex'; // Pokaż podgląd
+                    modelViewerElement.setAttribute('src', model.model);
+                    modelViewerElement.style.display = 'block';
+                }, 100);
+            
+                modelViewer.style.display = 'flex';
             });
+            
+            
         });
     }
 
     modelViewerElement.addEventListener('load', () => {
-        spinner.style.display = 'none'; // Ukryj spinner po załadowaniu modelu
+        spinner.style.display = 'none';
     });
 
     fetchModels();
-
     categoryButtons.forEach(button => {
         button.addEventListener('click', () => {
             const category = button.getAttribute('data-category');
@@ -75,8 +78,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     closeViewer.addEventListener('click', () => {
-        modelViewer.style.display = 'none'; // Ukryj podgląd
-        modelViewerElement.removeAttribute('src'); // Wyczyść model
-        spinner.style.display = 'none'; // Ukryj spinner
+        modelViewer.style.display = 'none';
     });
 });
