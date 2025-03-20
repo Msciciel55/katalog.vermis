@@ -6,7 +6,7 @@
         "model": "assets/models/mebel1.glb",
         "category": "Meble"
     },
-    {
+        {
         "title": "Pancerz Diego2",
         "description": "Elegancki stół wykonany z drewna dębowego.",
         "thumbnail": "assets/card/zbroja1.webp",
@@ -15,7 +15,7 @@
     },
     {
         "title": "Dom 1",
-        "description": "Elegancki dwupiętrowy dom.",
+        "description": "Elegancki stół wykonany z drewna dębowego.",
         "thumbnail": "assets/card/dom1.webp",
         "model": "assets/models/DOM1.glb",
         "category": "Stoły craftingowe"
