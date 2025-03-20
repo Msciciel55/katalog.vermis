@@ -44,17 +44,30 @@ document.addEventListener('DOMContentLoaded', () => {
             
                 spinner.style.display = 'block';
             
-                // Ukryj model-viewer, aby uniknąć efektu starego modelu
-                modelViewerElement.style.display = 'none';
-                modelViewerElement.removeAttribute('src');
+                // Stary model usuwamy
+                modelViewerElement.remove();
             
-                setTimeout(() => {
-                    modelViewerElement.setAttribute('src', model.model);
-                    modelViewerElement.style.display = 'block';
-                }, 100);
+                // Tworzymy nowy element <model-viewer>
+                const newModelViewer = document.createElement('model-viewer');
+                newModelViewer.setAttribute('src', model.model);
+                newModelViewer.setAttribute('alt', model.title);
+                newModelViewer.setAttribute('auto-rotate', '');
+                newModelViewer.setAttribute('camera-controls', '');
+                newModelViewer.setAttribute('reveal', 'interaction'); // Opcjonalne, zapobiega błędom ładowania
+                newModelViewer.style.width = '100%';
+                newModelViewer.style.height = '100%';
+            
+                // Dodajemy nowy element do kontenera
+                modelViewer.insertBefore(newModelViewer, spinner);
+            
+                // Ukrywamy spinner po załadowaniu modelu
+                newModelViewer.addEventListener('load', () => {
+                    spinner.style.display = 'none';
+                });
             
                 modelViewer.style.display = 'flex';
             });
+            
             
             
         });
