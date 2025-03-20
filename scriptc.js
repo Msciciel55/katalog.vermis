@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const spinner = document.getElementById('spinner');
     const categoryButtons = document.querySelectorAll('.button');
 
-    const jsonUrl = '/assets/dane/ciesla.json';
+    const jsonUrl = 'https://raw.githubusercontent.com/Msciciel55/katalog.vermis/refs/heads/main/assets/dane/ciesla.json';
     
     let models = [];
 
