@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const modelViewer = document.getElementById('model-viewer');
     const closeViewer = document.getElementById('close-viewer');
     const modelViewerElement = modelViewer.querySelector('model-viewer');
-    const spinner = document.getElementById('spinner'); // Pobierz spinner
+    const spinner = document.getElementById('spinner');
     const categoryButtons = document.querySelectorAll('.button');
 
     const jsonUrl = '/assets/dane/cesla.json';
@@ -41,27 +41,27 @@ document.addEventListener('DOMContentLoaded', () => {
             card.addEventListener('click', () => {
                 document.getElementById('model-title').textContent = model.title;
                 document.getElementById('model-description').textContent = model.description;
-                spinner.style.display = 'block';
-                if (modelViewerElement.getAttribute('src') === model.model) {
-                    spinner.style.display = 'none';
-                } else {
-                    modelViewerElement.setAttribute('src', '');
-                    setTimeout(() => {
-                        modelViewerElement.setAttribute('src', model.model);
-                    }, 50);
-                }
-            
-                modelViewer.style.display = 'flex';
+                spinner.style.display = 'block'; // Pokaż spinner
+
+                // Najpierw usuń poprzedni model
+                modelViewerElement.removeAttribute('src');
+
+                // Dodaj krótkie opóźnienie, aby przeglądarka miała czas na wyczyszczenie
+                setTimeout(() => {
+                    modelViewerElement.setAttribute('src', model.model); // Ustaw nowy model
+                }, 50); // Opóźnienie 50 ms
+
+                modelViewer.style.display = 'flex'; // Pokaż podgląd
             });
-            
         });
     }
 
     modelViewerElement.addEventListener('load', () => {
-        spinner.style.display = 'none';
+        spinner.style.display = 'none'; // Ukryj spinner po załadowaniu modelu
     });
 
     fetchModels();
+
     categoryButtons.forEach(button => {
         button.addEventListener('click', () => {
             const category = button.getAttribute('data-category');
@@ -75,6 +75,8 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     closeViewer.addEventListener('click', () => {
-        modelViewer.style.display = 'none';
+        modelViewer.style.display = 'none'; // Ukryj podgląd
+        modelViewerElement.removeAttribute('src'); // Wyczyść model
+        spinner.style.display = 'none'; // Ukryj spinner
     });
 });
