@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const spinner = document.getElementById('spinner');
     const categoryButtons = document.querySelectorAll('.button');
 
-    const jsonUrl = '/assets/dane/cesla.json';
+    const jsonUrl = '/assets/dane/ciesla.json';
     
     let models = [];
 
