@@ -15,7 +15,7 @@
     },
     {
         "title": "Dom 1",
-        "description": "Elegancki stół wykonany z drewna dębowego.",
+        "description": "Elegancki dwupiętrowy dom.",
         "thumbnail": "assets/card/dom1.webp",
         "model": "assets/models/DOM1.glb",
         "category": "Stoły craftingowe"
