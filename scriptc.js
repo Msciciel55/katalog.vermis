@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const spinner = document.getElementById('spinner'); // Pobierz spinner
     const categoryButtons = document.querySelectorAll('.button');
 
-    const jsonUrl = 'https://raw.githubusercontent.com/Msciciel55/3dkatalog/refs/heads/main/dane.json';
+    const jsonUrl = 'https://raw.githubusercontent.com/Msciciel55/katalog.vermis/refs/heads/main/assets/dane/ciesla.json';
 
     let models = [];
 
@@ -43,32 +43,17 @@ document.addEventListener('DOMContentLoaded', () => {
                 document.getElementById('model-description').textContent = model.description;
             
                 spinner.style.display = 'block';
-            
-                // Stary model usuwamy
-                modelViewerElement.remove();
-            
-                // Tworzymy nowy element <model-viewer>
-                const newModelViewer = document.createElement('model-viewer');
-                newModelViewer.setAttribute('src', model.model);
-                newModelViewer.setAttribute('alt', model.title);
-                newModelViewer.setAttribute('auto-rotate', '');
-                newModelViewer.setAttribute('camera-controls', '');
-                newModelViewer.setAttribute('reveal', 'interaction'); // Opcjonalne, zapobiega błędom ładowania
-                newModelViewer.style.width = '100%';
-                newModelViewer.style.height = '100%';
-            
-                // Dodajemy nowy element do kontenera
-                modelViewer.insertBefore(newModelViewer, spinner);
-            
-                // Ukrywamy spinner po załadowaniu modelu
-                newModelViewer.addEventListener('load', () => {
-                    spinner.style.display = 'none';
-                });
+                if (modelViewerElement.getAttribute('src') === model.model) {
+                    spinner.style.display = 'none'; 
+                } else {
+                    modelViewerElement.setAttribute('src', ''); 
+                    setTimeout(() => {
+                        modelViewerElement.setAttribute('src', model.model);
+                    }, 50);
+                }
             
                 modelViewer.style.display = 'flex';
             });
-            
-            
             
         });
     }
