@@ -1,16 +1,79 @@
 [
     {
         "title": "Ściana z otworem",
-        "description": "DREWNO x20\nPACZKA_GWOZDZI x2",
+        "description": "WYMAGANIA:\nDREWNO x20\nPACZKA_GWOZDZI x2",
         "thumbnail": "assets/card/sciana.webp",
         "model": "assets/models/sciana.glb",
-        "category": "Namioty"
+        "category": "Konstrukcje obronne"
     },
-        {
+    {
         "title": "Płot",
-        "description": "dupa",
+        "description": "WYMAGANIA:\nDREWNO x4",
         "thumbnail": "assets/card/plot.webp",
         "model": "assets/models/plot.glb",
-        "category": "Budynki"
+        "category": "Konstrukcje obronne"
+    },
+    {
+        "title": "Palisada",
+        "description": "WYMAGANIA:\nDREWNO x15\nPACZKA_GWOZDZI x1",
+        "thumbnail": "assets/card/palisada.webp",
+        "model": "assets/models/palisada.glb",
+        "category": "Konstrukcje obronne"
+    },
+    {
+        "title": "Palisada",
+        "description": "WYMAGANIA:\nTWARDE_DREWNO x5\nDREWNO x10",
+        "thumbnail": "assets/card/palisada2.webp",
+        "model": "assets/models/palisada2.glb",
+        "category": "Konstrukcje obronne"
+    },
+    {
+        "title": "Mur",
+        "description": "WYMAGANIA:\nKAMIEN x100",
+        "thumbnail": "assets/card/mur.webp",
+        "model": "assets/models/mur.glb",
+        "category": "Konstrukcje obronne"
+    },
+    {
+        "title": "Mur",
+        "description": "WYMAGANIA:\nKAMIEN x100\nDREWNO x5",
+        "thumbnail": "assets/card/mur2.webp",
+        "model": "assets/models/mur2.glb",
+        "category": "Konstrukcje obronne"
+    },
+    {
+        "title": "Mur",
+        "description": "WYMAGANIA:\nKAMIEN x100\nTWARDE_DREWNO x10\nPACZKA_GWOZDZI x1",
+        "thumbnail": "assets/card/mur3.webp",
+        "model": "assets/models/mur3.glb",
+        "category": "Konstrukcje obronne"
+    },
+    {
+        "title": "Mur",
+        "description": "WYMAGANIA:\nKAMIEN x50\nTWARDE_DREWNO x20\nPACZKA_GWOZDZI x2",
+        "thumbnail": "assets/card/mur4.webp",
+        "model": "assets/models/mur4.glb",
+        "category": "Konstrukcje obronne"
+    },
+    {
+        "title": "Palisada",
+        "description": "WYMAGANIA:\nTWARDE_DREWNO x30\nWYTRZYMALE_DREWNO x5\nPACZKA_GWOZDZI x2",
+        "thumbnail": "assets/card/palisada3.webp",
+        "model": "assets/models/palisada3.glb",
+        "category": "Konstrukcje obronne"
+    },
+    {
+        "title": "Palisada",
+        "description": "WYMAGANIA:\nWYTRZYMALE_DREWNO x30\nPACZKA_GWOZDZI x5",
+        "thumbnail": "assets/card/palisada4.webp",
+        "model": "assets/models/palisada4.glb",
+        "category": "Konstrukcje obronne"
+    },
+    {
+        "title": "Wieża obserwacyjna",
+        "description": "WYMAGANIA:\nWYTRZYMALE_DREWNO x10\nTWARDE_DREWNO x30\nPACZKA_GWOZDZI x5",
+        "thumbnail": "assets/card/wieza.webp",
+        "model": "assets/models/wieza.glb",
+        "category": "Konstrukcje obronne"
     }
 ]
