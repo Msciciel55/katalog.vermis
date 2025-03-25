@@ -52,6 +52,7 @@ body {
     filter: blur(10px);
     z-index: -1;
 }
+
 .model-grid {
     display: flex;
     flex-wrap: wrap;
