@@ -2,15 +2,15 @@
     {
         "title": "Ściana z otworem",
         "description": "DREWNO x20\nPACZKA_GWOZDZI x2",
-        "thumbnail": "thumbnails/thumbnail1.jpg",
-        "model": "assets/models/DOM1.glb",
+        "thumbnail": "assets/card/sciana.webp",
+        "model": "assets/models/sciana.glb",
         "category": "Namioty"
     },
         {
-        "title": "budowa2",
-        "description": "Elegancki stół wykonany z drewna dębowego.",
-        "thumbnail": "assets/card/zbroja1.webp",
-        "model": "assets/models/DOM1.glb",
+        "title": "Płot",
+        "description": "dupa",
+        "thumbnail": "assets/card/plot.webp",
+        "model": "assets/models/plot.glb",
         "category": "Budynki"
     }
 ]
