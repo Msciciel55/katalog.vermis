@@ -1,7 +1,7 @@
 [
     {
-        "title": "budowa1",
-        "description": "Elegancki stół wykonany z drewna dębowego.",
+        "title": "Ściana z otworem",
+        "description": "DREWNO x20\nPACZKA_GWOZDZI x2",
         "thumbnail": "thumbnails/thumbnail1.jpg",
         "model": "assets/models/DOM1.glb",
         "category": "Namioty"
